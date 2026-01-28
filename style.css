@@ -2042,6 +2042,28 @@ button {
   cursor: default;
 }
 
+/* Specific subject positions for narrow and active states */
+.industry-card[data-industry="technology"] {
+  --subject-pos: 55%;
+  --active-pos: 40%;
+}
+.industry-card[data-industry="manufacturing"] {
+  --subject-pos: 41%;
+  --active-pos: 15%;
+}
+.industry-card[data-industry="hospitality"] {
+  --subject-pos: 81%;
+  --active-pos: 70%;
+}
+.industry-card[data-industry="telecom"] {
+  --subject-pos: 70%;
+  --active-pos: 60%;
+}
+.industry-card[data-industry="healthcare"] {
+  --subject-pos: 75%;
+  --active-pos: 65%;
+}
+
 .card-bg {
   position: absolute;
   top: 0;
@@ -2049,8 +2071,14 @@ button {
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
-  transition: transform 0.6s ease;
+  background-position: var(--subject-pos, center) center;
+  transition:
+    transform 0.6s ease,
+    background-position 0.6s ease;
+}
+
+.industry-card.active .card-bg {
+  background-position: var(--active-pos, center) center;
 }
 
 .industry-card:not(.active):hover .card-bg {
@@ -2271,7 +2299,7 @@ button {
 .platform-intro {
   flex: 1 0 400px;
   max-width: 674px;
-  position: sticky;
+  position: static;
   top: 120px;
 }
 
@@ -2341,7 +2369,7 @@ button {
 }
 
 .platform-card .card-desc {
-  font-size: clamp(16px, 1.1vw, 18px);
+  font-size: clamp(13px, 1vw, 16px);
   font-family: var(--font-inter);
   font-weight: 300;
   color: #181d27;
@@ -2418,6 +2446,25 @@ button {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+}
+
+@media (max-width: 1536px) {
+  .platform-card .text-T1 {
+    font-size: clamp(16px, 1.1vw, 18px);
+  }
+  .platform-card {
+    padding: 16px;
+  }
+  .platform-grid {
+    gap: 16px;
+  }
+  .platform-container {
+    gap: 30px;
+  }
+  .card-features {
+    gap: 8px;
+    padding: 8px 0;
+  }
 }
 
 /* Responsive Styles */
