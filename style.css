@@ -909,7 +909,7 @@ button {
 }
 
 .hospitality-hero {
-  margin-top: clamp(80px, 5vw, 100px);
+  margin-top: clamp(30px, 5vw, 100px);
   background-color: #fff;
 }
 
@@ -1122,6 +1122,12 @@ button {
   }
 }
 
+@media (max-width: 1536px) {
+  .slide-track {
+    gap: 55px;
+  }
+}
+
 /* DESKTOP STYLES (>= 768px) */
 @media (min-width: 768px) {
   .slide-track {
@@ -1142,7 +1148,7 @@ button {
 @media (max-width: 767px) {
   .slide-track {
     animation: scroll 20s linear infinite;
-    gap: 70px; /* Ensure gap is consistent */
+    gap: 45px; /* Ensure gap is consistent */
   }
 
   /* Ensure all slides are visible on mobile for the loop */
@@ -1150,13 +1156,13 @@ button {
     display: flex;
   }
 
-  .slider::before,
+  /* .slider::before,
   .slider::after {
     display: block;
-  }
+  } */
 }
 
-.slider::before,
+/* .slider::before,
 .slider::after {
   background: linear-gradient(
     to right,
@@ -1179,7 +1185,7 @@ button {
   right: 0;
   top: 0;
   transform: rotateZ(180deg);
-}
+} */
 
 .btn-wrapper {
   display: flex;
@@ -2857,7 +2863,7 @@ button {
 }
 
 .roi__card h5 {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .roi__card .text-T1 {
