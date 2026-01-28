@@ -904,7 +904,6 @@ button {
 
 /* ========== HERO SECTION (REDESIGNED) ========== */
 
-
 .hero-section .container {
   padding-right: 0px;
 }
@@ -1292,11 +1291,6 @@ button {
   gap: 12px;
 }
 
-.text-T1 {
-  font-family: "Matter";
-  font-weight: 300;
-}
-
 .bullet-icon {
   width: 22px;
   flex-shrink: 0;
@@ -1330,7 +1324,7 @@ button {
   filter: blur(164px);
 }
 
-@media (max-width:520px) {
+@media (max-width: 520px) {
   .svg_circle {
     width: 300px;
   }
@@ -2264,38 +2258,42 @@ button {
 .platform-container {
   display: flex;
   gap: 60px;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
 .platform-intro {
-  flex: 0 0 400px;
+  flex: 1 0 400px;
+  max-width: 674px;
   position: sticky;
   top: 120px;
 }
 
 .platform-main-title {
-  font-size: clamp(32px, 3.2vw, 38px);
+  font-size: clamp(28px, 2.4vw, 48px);
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.3;
   margin-bottom: 24px;
+  max-width: 480px;
 }
 
-.platform-description {
-  font-size: 14px;
-  line-height: 1.4;
-  color: var(--color-text-secondary);
-  margin-bottom: 32px;
+.platform-intro .text-T1 {
+  font-size: clamp(16px, 1.1vw, 18px);
+  font-family: "Inter";
   font-weight: 300;
+  max-width: 510px;
+  margin-bottom: 8px;
 }
 
 .platform-card {
   background: #fff;
-  border: 1px solid #eaecf0;
-  border-radius: 12px;
-  padding: 32px;
+  border: 1px solid #e9eaeb;
+  border-radius: 14px;
+  padding: 24px;
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
+  max-width: 475px;
 }
 
 .platform-card:hover {
@@ -2305,9 +2303,9 @@ button {
 
 .platform-card .card-header {
   display: flex;
-  align-items: center;
+  align-items: start;
   gap: 16px;
-  margin-bottom: 16px;
+  /* margin-bottom: 16px; */
 }
 
 .platform-card .icon-wrapper {
@@ -2315,6 +2313,7 @@ button {
   height: 40px;
   /* background: #f2f4f7; */
   border-radius: 8px;
+  margin-top: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2325,25 +2324,30 @@ button {
   height: 38px;
 }
 
-.platform-card h4 {
-  font-size: 24px;
-  font-weight: 600;
-  margin: 0;
+.platform-card h5 {
+  margin-bottom: 6px;
+}
+
+@media (max-width: 1536px) {
+  .platform-card h5 {
+    font-size: 24px;
+  }
 }
 
 .platform-card .card-desc {
-  font-size: 16px;
+  font-size: clamp(16px, 1.1vw, 18px);
   font-family: var(--font-inter);
   font-weight: 300;
-  color: var(--color-text-secondary);
-  margin-bottom: 24px;
+  color: #181d27;
+  margin-bottom: 16px;
   line-height: 1.5;
 }
 
 .card-features {
   list-style: none;
-  padding: 0;
-  margin: 0 0 32px 0;
+  border-top: 1px solid #e9eaeb;
+  border-bottom: 1px solid #e9eaeb;
+  padding: 16px 0;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -2356,24 +2360,24 @@ button {
 }
 
 .check-circle {
-  width: 24px;
-  height: 24px;
-  background: #f2f4f7;
+  width: 38px;
+  height: 38px;
+  background: transparent;
   border-radius: 50%;
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   flex-shrink: 0;
   margin-top: 2px;
 }
 
 .check-circle img {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
 }
 
 .card-features span {
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.5;
   font-family: var(--font-inter);
   font-weight: 300;
@@ -2381,13 +2385,14 @@ button {
 }
 
 .platform-card .learn-more {
-  margin-top: auto;
+  margin-top: 8px;
   display: flex;
   align-items: center;
+  font-family: "Inter";
   gap: 8px;
   font-weight: 600;
   color: var(--color-text-primary);
-  font-size: 16px;
+  /* font-size: 16px; */
   transition: gap 0.3s ease;
 }
 
@@ -2397,11 +2402,13 @@ button {
 
 .platform-card .learn-more img {
   width: 20px;
+  margin-left: 6px;
   height: 20px;
 }
 
 .platform-grid {
-  flex: 1;
+  /* flex: 1; */
+  /* width: max-content; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
@@ -2431,14 +2438,13 @@ button {
   }
 }
 
-
 /* ========== RECRUITMENT PLATFORM SECTION ========== */
 
 .recruitment-plaftform {
   width: 100%;
-  height: 980px;
-  padding: 100px 0px;
-  background-color: #F5F5F5;
+  height: auto;
+  /* padding: 100px 0px; */
+  background-color: #f5f5f5;
 }
 
 .feedback-section {
@@ -2448,7 +2454,7 @@ button {
 .feedback-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   margin-bottom: 60px;
   gap: 40px;
 }
@@ -2461,6 +2467,7 @@ button {
 .feedback-text-content .text-T1 {
   text-align: left;
   margin-top: 12px;
+  font-weight: 300;
 }
 
 .trust-logos {
@@ -2508,10 +2515,9 @@ button {
 }
 
 @media (max-width: 1536px) {
-
   .testimonial-card .text-T1 {
     font-size: 16px;
-    color: #45556C;
+    color: #45556c;
     line-height: 27px;
     vertical-align: middle;
   }
@@ -2556,7 +2562,6 @@ button {
 }
 
 @media (max-width: 1020px) {
-
   .recruitment-plaftform {
     height: initial;
     padding: 50px 0;
@@ -2593,7 +2598,7 @@ button {
 }
 
 .t-grid {
-  display: grid;  
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 }
@@ -2602,7 +2607,7 @@ button {
   position: relative;
   border-radius: 18px;
   overflow: hidden;
-  min-height: 360px;
+  max-height: 610px;
 
   background-image: var(--bg);
   background-size: cover;
@@ -2612,9 +2617,15 @@ button {
   /* width: 418px;
   height: 610px; */
 
-  max-width: 327px;
-  height: 510px;
+  /* max-width: 327px; */
+  height: 600px;
   width: 100%;
+}
+
+@media (max-width: 1536px) {
+  .t-card {
+    max-height: 500px;
+  }
 }
 
 .t-card::before {
@@ -2623,9 +2634,9 @@ button {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.20) 45%,
-    rgba(0,0,0,0.05) 100%
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0.2) 45%,
+    rgba(0, 0, 0, 0.05) 100%
   );
   pointer-events: none;
 }
@@ -2638,15 +2649,15 @@ button {
   left: 14px;
   right: 14px;
   bottom: 14px;
-  height: 190px;
+  min-height: 190px;
 
   padding: 16px 14px;
   border-radius: 16px;
 
-  color: rgba(255,255,255,0.92);
+  color: rgba(255, 255, 255, 0.92);
 
-  background: rgba(255,255,255,0.08);
-  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
@@ -2654,12 +2665,12 @@ button {
 
 .t-glass--red {
   background: rgba(175, 26, 34, 0.28);
-  border: 1px solid rgba(255,255,255,0.18);
+  border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .t-glass--light {
-  background: rgba(255,255,255,0.18);
-  color: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.18);
+  color: rgba(255, 255, 255, 0.92);
 }
 
 .t-quote {
@@ -2722,14 +2733,12 @@ button {
   width: 89px;
   height: 52px;
   transform: translate(16px, 8px);
-
 }
 
 .t-card:nth-child(4) .t-logo img {
   width: 133px;
   height: 27px;
 }
-
 
 @media (max-width: 1100px) {
   .t-grid {
@@ -2741,23 +2750,40 @@ button {
 }
 
 @media (max-width: 760px) {
-  .t-container { width: min(720px, calc(100% - 32px)); }
-  .t-grid { grid-template-columns: 1fr; place-items: center; }
-  .t-card { min-height: 480px; max-width: 400px; }
-  .t-quote { font-size: 14px; }
+  .t-container {
+    width: min(720px, calc(100% - 32px));
+  }
+  .t-grid {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  .t-card {
+    min-height: 480px;
+    max-width: 400px;
+  }
+  .t-quote {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 420px) {
-  .t-card { min-height: 440px; max-width: 400px; }
-  .t-glass { left: 12px; right: 12px; bottom: 12px; }
+  .t-card {
+    min-height: 440px;
+    max-width: 400px;
+  }
+  .t-glass {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
 }
 
 /* ========== PROVEN AI RECRUITING SECTION ========== */
 
 .proven-ai-recruiting {
   width: 100%;
-  height: 821px;
-  padding: 100px 0px;
+  height: auto;
+  /* padding: 100px 0px; */
   background-color: #fff;
 }
 
@@ -2799,12 +2825,12 @@ button {
   font-weight: 300;
   font-size: 15.5px;
   line-height: 1.65;
-  color: #181D27;
+  color: #181d27;
 }
 
 .roi__divider {
   height: 1px;
-  background: rgba(15, 23, 42, 0.10);
+  background: rgba(15, 23, 42, 0.1);
   margin: 45px 0 0;
 }
 
@@ -2814,8 +2840,8 @@ button {
 }
 
 .roi__card {
-  padding: 28px 26px 34px;
-  border-right: 1px solid rgba(15, 23, 42, 0.10);
+  padding: 24px 32px;
+  border-right: 1px solid rgba(15, 23, 42, 0.1);
 }
 
 .roi__card:last-child {
@@ -2827,27 +2853,29 @@ button {
   font-weight: 700;
   font-size: 12px;
   color: #3f63ff;
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
 }
 
-.roi__card h3 {
-  margin: 0 0 16px;
-  font-family: "Matter", sans-serif;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 1.2;
-  color: #181D27;
+.roi__card h5 {
+  margin-bottom: 16px;
 }
 
-.roi__card p {
-  margin: 0;
+.roi__card .text-T1 {
   font-family: var(--font-inter);
   font-weight: 300;
-  font-size: 14px;
-  line-height: 1.75;
-  color: #181D27;
+  color: #181d27;
 }
 
+@media (max-width: 1536px) {
+  .roi__card .text-T1 {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .roi__card h5 {
+    font-size: 24px;
+  }
+}
 
 /* Smaller desktop/laptop */
 @media (max-width: 1100px) {
@@ -2856,8 +2884,8 @@ button {
   }
 
   .roi__card {
-    border-right: 1px solid rgba(15, 23, 42, 0.10);
-    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+    border-right: 1px solid rgba(15, 23, 42, 0.1);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
   }
 
   .roi__card:nth-child(2),
@@ -2893,11 +2921,12 @@ button {
 
   .roi__card {
     border-right: none;
-    border-bottom: 1px solid rgba(15, 23, 42, 0.10);
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
     padding: 22px 18px 26px;
   }
 
-  .roi__card:last-child {
-    border-bottom: none;
+  .roi__card:nth-child(3),
+  .roi__card:nth-child(4) {
+    border-bottom: 1px solid rgba(15, 23, 42, 0.1);
   }
 }
